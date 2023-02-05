@@ -1,0 +1,10 @@
+html {
+  background-color: rgb(1, 102, 117);
+  color: white;
+}
+
+.user-details {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  text-align: center;
+}
