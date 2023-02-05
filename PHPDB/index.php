@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <title></title>
 </head>
@@ -20,7 +20,7 @@
     </nav>
   </header>
 
-  <form class="user-details" action="#">
+  <form class="user-details" action="user_details.php" method="post">
     <label for="firstName">First name:</label>
     <input type="text" name="name" id="firstName">
     <label for="lastName">Last name:</label>
@@ -38,27 +38,27 @@
   <div id="output" value=""></div>
 
 <?php
-
-  function getArray() {
-    return array("Volvo", "BMW", "Toyota");
-  };
-
-
-  $firstElement = getArray()[1];
-
-  $cars = [
-    "Volvo", "BMW", "Toyota"
-  ];
-
-  if (getArray() == $cars) {
-    echo "This is the same make";
-  } else {
-    echo "This is not the same make";
+class Car {
+  public $color;
+  public $model;
+  public function __construct($color, $model) {
+    $this->color = $color;
+    $this->model = $model;
   }
+  
+  public function message() {
+    return "My car is a " . $this->color . " " . $this->model . "!";
+  }
+}
 
-  echo "";
-  echo "</br>";
-  var_dump($cars);
+$myCar = new Car("black", "Volvo");
+
+echo $myCar -> message();
+echo "<br>";
+
+$myCar = new Car("red", "Toyota");
+echo $myCar -> message();
+
 ?>
 </body>
 
