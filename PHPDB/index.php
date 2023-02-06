@@ -27,7 +27,7 @@
     <input type="text" name="lastname" id="lastName">
     <label for="age">Age:</label>
     <input type="text" name="age" id="age">
-
+    <br>
     <label for="terms">Terms & Conditions</label>
     <input type="checkbox" name="terms" id="terms">
 
